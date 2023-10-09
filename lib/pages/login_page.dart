@@ -2,6 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:petcare/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(children: [
               Image.asset("assets/images/login_image.png"),
               Text(
-                "Welcome",
+                "Login",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -86,7 +87,8 @@ class _LoginPageState extends State<LoginPage> {
                     style: ElevatedButton.styleFrom(fixedSize: Size(125, 50)),
                     child: Text(
                       "Login",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     )),
               ),
               RichText(
@@ -99,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.blue),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        // print("sign up");
+                        Navigator.pushNamed(context, MyRoutes.signinRoute);
                       })
               ]))
             ]),
