@@ -82,7 +82,10 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: ElevatedButton(
                     onPressed: () {
-                      if (_formkey.currentState!.validate()) {}
+                      if (_formkey.currentState!.validate()) {
+                        Navigator.pushReplacementNamed(
+                            context, MyRoutes.homeRoute);
+                      }
                     },
                     style: ElevatedButton.styleFrom(fixedSize: Size(125, 50)),
                     child: Text(

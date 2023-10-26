@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcare/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petcare/pages/mainPage.dart';
 import 'package:petcare/pages/signin_page.dart';
 import 'package:petcare/utils/routes.dart';
 
@@ -33,6 +34,7 @@ class _MyAppState extends State<MyApp> {
         "/":(context) => LoginPage(),
         MyRoutes.loginRoute:(context) => LoginPage(),
         MyRoutes.signinRoute:(context) => SignIn(),
+        MyRoutes.homeRoute:(context) => HomePage(),
       
       },
     );
